@@ -12,11 +12,11 @@ from scipy.spatial.distance import pdist
 #%%
 
 
-word = 'communist'
+word = 'lesbian'
 
-
+"/home/beck/Repositories/DynamicWord2Vec"
 wordlist = []
-fid = open('data/wordlist.txt','r')
+fid = open('./misc/wordlist.txt','r')
 for line in fid:
     wordlist.append(line.strip())
 fid.close()
@@ -29,8 +29,7 @@ for k in xrange(len(wordlist)):
 
 times = range(180,200) # total number of time points (20/range(27) for ngram/nyt)
 
-emb_all = sio.loadmat('results/embeddings.mat')
-
+emb_all = sio.loadmat('./embeddings/embeddings.mat')
 #%%
 
 nn = 50
